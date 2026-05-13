@@ -17,17 +17,26 @@ For the latest release information, please check the releases tab.
 - CMake: `brew install cmake`
 - Apple's `container` CLI installed at `/usr/local/bin/container` or `/opt/homebrew/bin/container`
 
-## Build
+## Building from Source
 
+Requires an Apple Silicon Mac running macOS 13.0 or later.
+
+Install the dependencies if you haven't already:
 ```bash
+xcode-select --install
+brew install cmake
+```
+
+Clone the repository and build:
+```bash
+git clone https://github.com/your-username/ContainerLauncher.git
 cd ContainerLauncher
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j$(sysctl -n hw.logicalcpu)
 ```
 
-The `.app` bundle will be at `build/ContainerLauncher.app`. Copy it to `/Applications` if you'd like:
-
+The compiled app bundle will be at `build/ContainerLauncher.app`. To install it:
 ```bash
 cp -r build/ContainerLauncher.app /Applications/
 ```
