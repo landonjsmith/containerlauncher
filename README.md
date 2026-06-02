@@ -40,3 +40,6 @@ The compiled app bundle will be at `build/ContainerLauncher.app`. To install it:
 ```bash
 cp -r build/ContainerLauncher.app /Applications/
 ```
+## DMG NOTE: 
+If you choose to install the pre-compiled DMG on your host Macintosh, you will have to allow the application to run via the security settings. 
+This is simply because the application isn't signed with Apple's trusted developer certificates. I'm too poor to afford them. :-)
